@@ -14,13 +14,13 @@ public class Generation {
 
     public Generation() { }
 
-    public Generation(Long generationNum, String generationName, String generationMap) {
-        this.generationNum = generationNum;
-        this.generationName = generationName;
-        this.generationMap = generationMap;
+    public Generation(long num, String name, String map) {
+        this.generationNum = num;
+        this.generationName = name;
+        this.generationMap = map;
     }
 
-    public Long getGenerationNum() {
+    public long getGenerationNum() {
         return generationNum;
     }
 
