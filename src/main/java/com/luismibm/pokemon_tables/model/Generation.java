@@ -1,6 +1,5 @@
 package com.luismibm.pokemon_tables.model;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -9,16 +8,16 @@ import jakarta.persistence.Table;
 public class Generation {
 
     @Id
-    private Long generationNum;
-
-    @Column(nullable = false)
+    private long generationNum;
     String generationName;
+    String generationMap;
 
     public Generation() { }
 
-    public Generation(Long generationNum, String generationName) {
+    public Generation(Long generationNum, String generationName, String generationMap) {
         this.generationNum = generationNum;
         this.generationName = generationName;
+        this.generationMap = generationMap;
     }
 
     public Long getGenerationNum() {
@@ -35,6 +34,14 @@ public class Generation {
 
     public void setGenerationName(String generationName) {
         this.generationName = generationName;
+    }
+
+    public String getGenerationMap() {
+        return generationMap;
+    }
+
+    public void setGenerationMap(String generationMap) {
+        this.generationMap = generationMap;
     }
 
 }
